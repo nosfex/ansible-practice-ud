@@ -1,6 +1,8 @@
 -
-  name: Check connectivity to target servers
+  name: Copy file to target servers
   hosts: all
   tasks:
-    - name: Ping test
-      ping: 
+    - name: Copy file
+      copy: 
+        src: /tmp/test-file.txt
+        dest: /tmp/test-file.txt
